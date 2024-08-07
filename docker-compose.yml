@@ -1,0 +1,13 @@
+version: '3'
+services:
+  server:
+    container_name: demo
+    image: demo:1.0
+    environment:
+      OPENAI_BASE_URL: "http://172.16.30.218:8000/v1"
+      EMB_MODEL_PATH: "/models/bge-small-zh-v1.5"
+    restart: always
+    command: []
+    ports:
+      - 8501:8501
+
