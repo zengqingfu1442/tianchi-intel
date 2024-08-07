@@ -5,7 +5,7 @@ docker run -itd \
         --net=host \
         --cpuset-cpus="0-47" \
         --cpuset-mems="0" \
-        -v /path/to/models:/llm/models \
+        -v /mnt/models:/llm/models \
         -e no_proxy=localhost,127.0.0.1 \
         --memory="64G" \
         --name=$CONTAINER_NAME \
