@@ -220,7 +220,7 @@ def make_qa_chain(text, chain_type, k, history, llm, emb,tem,q):
     llm = ChatOpenAI(
         streaming=True,
         verbose=True,
-        openai_api_key="none",
+        openai_api_key=os.getenv("OPENAI_API_KEY", "none"),
         openai_api_base = os.getenv("OPENAI_BASE_URL", "http://172.16.30.218:8000/v1"),
         model_name=os.getenv("OPENAI_MODEL", "Qwen/Qwen2-7B-Instruct")
     )
