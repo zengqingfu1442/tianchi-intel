@@ -113,9 +113,11 @@ curl http://localhost:8000/v1/completions \
 # 最终结合RAG效果展示
 
 视频
-<video src="img/demo.mp4" controls="controls" style="max-width: 730px;">
+<!-- <video src="img/demo.mp4" controls="controls" style="max-width: 730px;">
 </video>
 
 <video width="320" height="240" controls>
   <source src="img/demo.mp4" type="video/mp4">
-</video>
+</video> -->
+
+<video src="img/demo.mp4" width="352" height="720"></video>
