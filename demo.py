@@ -22,12 +22,6 @@ if not logger.handlers:
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"]="test1"
-os.environ["LANGCHAIN_ENDPOINT"]="https://api.smith.langchain.com"
-os.environ["LANGCHAIN_API_KEY"]=""
-os.environ["LANGCHAIN_API_KEY"]="ls__fd390e70390e4be2af0baf6b10599d91"
-
 def main_bg(main_bg):
     main_bg_ext = "png"
     st.markdown(
@@ -221,7 +215,7 @@ def make_qa_chain(text, chain_type, k, history, llm, emb,tem,q):
         streaming=True,
         verbose=True,
         openai_api_key=os.getenv("OPENAI_API_KEY", "none"),
-        openai_api_base = os.getenv("OPENAI_BASE_URL", "http://172.16.30.218:8000/v1"),
+        openai_api_base = os.getenv("OPENAI_BASE_URL", "http://172.31.78.97:8000/v1"),
         model_name=os.getenv("OPENAI_MODEL", "Qwen/Qwen2-7B-Instruct")
     )
 
