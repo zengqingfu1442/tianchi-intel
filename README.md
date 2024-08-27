@@ -115,3 +115,7 @@ curl http://localhost:8000/v1/completions \
 视频
 <video src="img/demo.mp4" controls="controls" style="max-width: 730px;">
 </video>
+
+<video width="320" height="240" controls>
+  <source src="img/demo.mp4" type="video/mp4">
+</video>
