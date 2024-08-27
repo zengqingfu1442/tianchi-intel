@@ -24,7 +24,7 @@ export OPENAI_BASE_URL="http://YOUR-SERVER-INNER-IP:8000/v1"
 export OPENAI_API_KEY="YWRtaW46dGVzdEAxMjMuY29tCg=="
 export OPENAI_MODEL="Qwen/Qwen2-7B-Instruct"
 export EMB_MODEL_PATH=`pwd`"/bge-small-zh-v1.5"
-streamlit run demo.py
+streamlit run demo.py --server.port 80
 ```
 
 
