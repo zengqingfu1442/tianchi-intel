@@ -111,4 +111,5 @@ curl http://localhost:8000/v1/completions \
 ![本地测试接口效果](img/curl-demo.gif)
 
 # 最终结合RAG效果展示
-![demo](img/demo.mp4)
+<video src="img/demo.mp4" controls="controls" style="max-width: 730px;">
+</video>
