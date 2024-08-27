@@ -120,4 +120,9 @@ curl http://localhost:8000/v1/completions \
   <source src="img/demo.mp4" type="video/mp4">
 </video> -->
 
-<video src="https://github.com/zengqingfu1442/tianchi-intel/blob/main/img/demo.mp4" width="352" height="720"></video>
+<video src="img/demo.mp4" width="352" height="720"></video>
+
+
+
+https://github.com/user-attachments/assets/686434a3-6c59-4899-a8cf-d032077fd698
+
