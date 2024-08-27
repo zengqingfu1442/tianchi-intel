@@ -4,11 +4,12 @@ services:
     container_name: demo
     image: demo:1.0
     environment:
-      OPENAI_BASE_URL: "http://172.16.30.28:8080/v1"
+      OPENAI_BASE_URL: "http://172.31.78.97:8000/v1"
       OPENAI_API_KEY: "YWRtaW46dGVzdEAxMjMuY29tCg=="
+      OPENAI_MODEL: "Qwen/Qwen2-7B-Instruct"
       EMB_MODEL_PATH: "/models/bge-small-zh-v1.5"
     restart: always
     command: []
     ports:
-      - 8501:8501
+      - 80:8501
 

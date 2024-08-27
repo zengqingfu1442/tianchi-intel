@@ -1,18 +1,10 @@
 #!/bin/bash
-model="/llm/models/Qwen2-7B-Instruct"
 served_model_name="Qwen/Qwen2-7B-Instruct"
 
-
-python -m ipex_llm.vllm.cpu.entrypoints.openai.api_server \
-  --served-model-name $served_model_name \
-  --port 8000 \
-  --model $model \
-  --trust-remote-code \
-  --device cpu \
-  --dtype bfloat16 \
-  --enforce-eager \
-  --load-in-low-bit bf16 \
-  --max-model-len 4096 \
-  --max-num-batched-tokens 10240 \
-  --max-num-seqs 12 \
-  --tensor-parallel-size 1
+python3 -m ipex_llm.vllm.cpu.entrypoints.openai.api_server \
+        --model qwen2/Qwen/Qwen2-7B-Instruct --port 8000  \
+        --served-model-name 'Qwen/Qwen2-7B-Instruct' \
+        --load-format 'auto' --device cpu --dtype bfloat16 \
+        --load-in-low-bit sym_int4 \
+        --trust-remote-code \
+        --max-num-batched-tokens 32768
