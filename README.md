@@ -112,7 +112,7 @@ curl http://localhost:8000/v1/completions \
 
 # 最终结合RAG效果展示
 
-视频
+比较完整的视频 img/demo.mp4， 由于Github上对视频大小限制了10M，此处只能展示一个较小的视频demo
 <!-- <video src="img/demo.mp4" controls="controls" style="max-width: 730px;">
 </video>
 
