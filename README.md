@@ -1,9 +1,16 @@
+# 下载本项目
+上传公钥到GitHub账号后可以使用对应的私钥下载代码
+```bash
+git clone git@github.com:zengqingfu1442/tianchi-intel.git
+```
+
 # 启动前端
 
 可以使用docker/docker-compose启动前端或者直接在ecs.g8i6xlarg上启动前端
 ## 方法一：使用docker/docker-compose部署前端（推荐）
 注意这里使用的是Ubuntu22.04的镜像，docker-compose启动之前记得将IP地址改成你自己ecs服务器的内网IP地址
 ```bash
+cd tianchi-intel
 apt-get udpate && apt-get install docker.io docker-buildx -y
 wget https://github.com/docker/compose/releases/download/v2.26.0/docker-compose-linux-x86_64 -O /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
@@ -55,6 +62,7 @@ pip install jsonschema Jinja2 -U
 ## 准备Qwen2-7B模型
 安装modelscope
 ```bash
+cd tianchi-intel
 pip install modelscope
 ```
 
@@ -70,6 +78,7 @@ model_dir = snapshot_download('Qwen/Qwen2-7B-Instruct', cache_dir='qwen2', revis
 
 ## 启动大模型推理服务
 ```bash
+cd tianchi-intel
 python3 -m ipex_llm.vllm.cpu.entrypoints.openai.api_server \
         --model qwen2/Qwen/Qwen2-7B-Instruct --port 8000  \
         --api-key 'YWRtaW46dGVzdEAxMjMuY29tCg==' \
