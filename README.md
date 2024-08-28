@@ -135,3 +135,10 @@ curl http://localhost:8000/v1/completions \
 
 https://github.com/user-attachments/assets/686434a3-6c59-4899-a8cf-d032077fd698
 
+
+# Benchmark 测试ipex-llm+vllm on cpu 的 throughput
+
+可以使用以下测试脚本：
+https://github.com/vllm-project/vllm/blob/main/benchmarks/benchmark_serving.py
+
+
